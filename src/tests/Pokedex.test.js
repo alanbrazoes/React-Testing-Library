@@ -108,7 +108,7 @@ describe('Tests Pokédex page.', () => {
       });
     });
 
-    test('When render Pokédex, the type \'All\' is selected?', () => {
+    test('When render Pokédex, the type \'All\' should have selected.', () => {
       const { queryByRole, getByTestId } = renderWithRouter(<App />);
       const nextPoke = queryByRole('button', { name: /próximo pokémon/i });
 
