@@ -4,7 +4,7 @@ import App from '../App';
 import renderWithRouter from './renderWithRouter';
 
 describe('Tests pokemon details.', () => {
-  test('', () => {
+  test('Should have data the pokémon.', () => {
     const { getByText, queryByRole } = renderWithRouter(<App />);
     const link = queryByRole('link', { name: /more details/i });
 
@@ -21,7 +21,7 @@ describe('Tests pokemon details.', () => {
     expect(paragraph).toBeInTheDocument();
   });
 
-  test('', () => {
+  test('Should have img and title the pokémon habitat.', () => {
     const { queryByText, queryAllByRole, getByText, queryByRole } = renderWithRouter(
       <App />,
     );
@@ -44,7 +44,7 @@ describe('Tests pokemon details.', () => {
     expect(img[2].alt).toBe('Pikachu location');
   });
 
-  test('', () => {
+  test('Must have field to mark pokemon as favorite.', () => {
     const { queryByRole, queryByLabelText } = renderWithRouter(<App />);
 
     const link = queryByRole('link', { name: /more details/i });
